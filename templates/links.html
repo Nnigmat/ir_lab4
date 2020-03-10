@@ -1,0 +1,11 @@
+<ul>
+    {% for song in songs %}
+    <li>
+        <a href="/doc/{{ song.filename }}"> <b>{{ song.artist }}</b>:<i>{{ song.title }}</i></a>
+    </li>
+    {% endfor %}
+
+    {% if not songs %}
+    Sorry no results on your query
+    {% endif %}
+</ul>
